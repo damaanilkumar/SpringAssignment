@@ -17,31 +17,37 @@
 	<!--  -->
 
 	<properties>
+		<sonar.coverage.jacoco.xmlReportPaths>
+			../app-it/target/site/jacoco-aggregate/jacoco.xml
+		</sonar.coverage.jacoco.xmlReportPaths>
 
 
 		<java.version>17</java.version>
 			<sonar.organization>damaanilkumar</sonar.organization>
 			<sonar.host.url>https://sonarcloud.io</sonar.host.url>
 
+
 		<sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
 		<sonar.sources>src/main/java</sonar.sources>
 		<sonar.sources>src/main/resources</sonar.sources>
 		<sonar.language>java</sonar.language>
 
-		<sonar.projectKey>damaanilkumar_Drone</sonar.projectKey>
+		<sonar.projectKey>damaanilkumar_SpringAssignment</sonar.projectKey>
 
-		<sonar.exclusions>
-			**/com/Assignment/demo/config/**,
-			**/com/Assignment/demo/repository/**,
-			**/com/Assignment/demo/entity/**,
-			**com/Assignment/demo/StudentManagementSystemApplication**
-		</sonar.exclusions>
 
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
 
 	<dependencies>
+
+
+		<dependency>
+			<groupId>org.jacoco</groupId>
+			<artifactId>jacoco-maven-plugin</artifactId>
+			<version>0.8.7</version>
+		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
